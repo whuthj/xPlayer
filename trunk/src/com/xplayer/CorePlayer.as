@@ -286,15 +286,15 @@ package com.xplayer
 		//全屏
 		public function Fullscreen(stage:Stage):Boolean
 		{
-			if (stage.displayState == StageDisplayState.FULL_SCREEN)
-			{
-				stage.displayState = StageDisplayState.NORMAL;
-				return false;
-			}
-			else
+			if (stage.displayState == StageDisplayState.NORMAL)
 			{
 				stage.displayState = StageDisplayState.FULL_SCREEN;
 				return true;
+			}
+			else
+			{
+				stage.displayState = StageDisplayState.NORMAL;
+				return false;
 			}
 		}
 		
